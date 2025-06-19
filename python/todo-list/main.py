@@ -2,6 +2,17 @@ import tkinter as tk
 from tkinter import PhotoImage, messagebox
 from controllers.user_controller import create_user, login_user
 from controllers.task_controller import get_tasks, add_task, toggle_task, delete_task
+import sys
+import os
+
+def resource_path(relative_path):
+    """Get absolute path to resource, works for dev and for PyInstaller"""
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 # === CONFIG ===
 BG = "#0F0113"
@@ -71,7 +82,7 @@ root.configure(bg=BG)
 root.resizable(False, False)
 
 # === Background Image ===
-img = PhotoImage(file="images/login.png")
+img = PhotoImage(file=resource_path("images/login.png"))
 tk.Label(root, image=img, bg="black").place(x=50, y=50)
 
 # === Pages as Frames ===
