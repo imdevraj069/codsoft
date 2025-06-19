@@ -9,8 +9,8 @@ It supports basic user authentication (Sign In / Sign Up) and task management fe
 
 ## 📸 Preview
 
-![Login Screen](images/auth-screen.jpg)
-![Login Screen](images/todo-list-screen.jpg)
+![Login Screen](images/auth-screen.png)
+![Login Screen](images/todo-list-screen.png)
 
 ---
 
